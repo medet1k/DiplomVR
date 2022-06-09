@@ -98,17 +98,21 @@ public class RobotSpawn : MonoBehaviour
 
             if (_hit.collider.gameObject.tag == "Testing" && Input.GetAxis("Fire1") == 1)
             {
-                for (int i = 0; i <= 4; i++)
+                if(Legs != null && Body != null && Arms != null && Head != null)
                 {
-                    Destroy(GameObject.FindGameObjectWithTag("RobotDatails"));
-                }
-                if (RobotAnim == null)
-                {
+                    for (int i = 0; i <= 4; i++)
+                    {
+                        Destroy(GameObject.FindGameObjectWithTag("RobotDatails"));
+                    }
+                    if (RobotAnim == null)
+                    {
 
 
-                    RobotAnim = mc.Robots[0];
-                    Instantiate(RobotAnim, RobotAnimSpawn.position, RobotAnimSpawn.rotation);
+                        RobotAnim = mc.Robots[0];
+                        Instantiate(RobotAnim, RobotAnimSpawn.position, RobotAnimSpawn.rotation);
+                    }
                 }
+                
             }
 
             if (_hit.collider.gameObject.name == "ClearButton" && Input.GetAxis("Fire1") == 1)

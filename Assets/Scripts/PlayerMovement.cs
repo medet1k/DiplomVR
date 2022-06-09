@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 
 public class PlayerMovement : MonoBehaviour
@@ -7,8 +6,6 @@ public class PlayerMovement : MonoBehaviour
     public Transform vrCamera;
 
     public float speed = 2.0f;   
-
-    public Text MyText;
 
     private CharacterController cc;
     void Start()
